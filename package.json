@@ -20,9 +20,12 @@
     "fusion-plugin-universal-events": "^2.0.10",
     "fusion-react": "^4.0.3",
     "fusion-tokens": "^2.1.2",
+    "mobx": "^5.15.4",
+    "mobx-react": "^6.2.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
+    "rxjs": "^6.5.5",
     "styletron-react": "^5.2.2",
     "typescript": "~3.7.2",
     "winston": "^3.2.1"
@@ -40,7 +43,7 @@
     "eslint-plugin-jest": "^22.20.0",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
-    "eslint-plugin-react-hooks": "^2.1.2",
+    "eslint-plugin-react-hooks": "^4.0.4",
     "prettier": "^1.18.2"
   },
   "scripts": {
@@ -48,11 +51,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-  },
-  "_moduleAliases": {
-    "@model": "src/data/models",
-    "@services": "src/services",
-    "@shared": "src/shared"
   },
   "eslintConfig": {
     "extends": "react-app"
