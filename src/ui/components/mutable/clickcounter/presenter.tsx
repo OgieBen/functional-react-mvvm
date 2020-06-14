@@ -8,9 +8,9 @@ interface IPresenterProps {
 }
 
 function Presenter(props: IPresenterProps) {
-    // Presenter should on receive data from the provider that
-    // are need to inform the presenter about what the view should
-    // display or render
+    // Presenter should only receive data from the provider that
+    // is needed to make decisions about how the view should be
+    // displayed or rendered
     return (
         <View clickCount={props.clickCount} onReset={props.clickCount >= 5 ? true : false}
               onDecrement={props.decrementCounter} onIncrement={props.incrementCounter}></View>
