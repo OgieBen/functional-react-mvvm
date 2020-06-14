@@ -1,4 +1,4 @@
-import {Click, IClick, Rx} from "../../mutable/clickcounter/viewmodel";
+import {Click, IClick, Rx} from "../clickcounter/viewmodel";
 import React, {Dispatch, useLayoutEffect, useState} from "react";
 
 export default function SimpleHeader(clickCounterModel: Click) {

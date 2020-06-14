@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import ClickCounter from "../../components/mutable/clickcounter/clickcounter";
 import {Click} from "../../components/mutable/clickcounter/viewmodel";
-import SimpleHeader from "../../components/immutable/simpleheader/simpleheader";
+import SimpleHeader from "../../components/mutable/simpleheader/simpleheader";
 
 function App() {
     // fetch the latest view model here from data provider
