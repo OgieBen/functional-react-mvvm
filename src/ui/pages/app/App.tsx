@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import ClickCounter from "../../components/mutable/clickcounter/clickcounter";
 import {Click, ClickCounterViewModelMutator, LoginModel, User} from "../../components/mutable/clickcounter/viewmodel";
+import {Subject} from "rxjs";
+import SimpleHeader from "../../components/immutable/simpleheader/simpleheader";
 
 const viewModel = ClickCounterViewModelMutator.getViewModel();
 
@@ -18,11 +20,11 @@ function App() {
     const userModel = new User();
     const clickCounterModel = new Click(0);
     return (
-        <React.Fragment>
-            {viewModel.click.counter >= 5 ? (<p className="activeButtonInfo">Reset Button Enabled</p>) : (<p className="inactiveButtonInfo">Reset Button Disabled</p>)}
-            <ClickCounter viewModel={viewModel}></ClickCounter>
-            <ClickCounter viewModel={viewModel}></ClickCounter>
-        </React.Fragment>
+        <div>
+            <SimpleHeader counter={clickCounterModel.counter}></SimpleHeader>
+            <ClickCounter clickModel={clickCounterModel}></ClickCounter>
+            <ClickCounter clickModel={clickCounterModel}></ClickCounter>
+        </div>
     );
 }
 

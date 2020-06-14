@@ -1,5 +1,7 @@
 // Login
 import {decorate, observable} from "mobx";
+import {Subject} from "rxjs";
+import {Dispatch} from "react";
 
 export interface ILoginViewModel {
     user: User;
@@ -65,3 +67,22 @@ export class ClickViewModel implements IClickViewModel {
 decorate(ClickViewModel, {
     click: observable
 })
+
+
+//RX
+
+export class Rx {
+    static readonly ClickObservable = new Subject<Click>();
+
+    static  registerObserver(f: Dispatch<any>) {
+        Rx.ClickObservable.subscribe(f);
+    }
+
+    static  sink(c: IClick) {
+        Rx.ClickObservable.next(c);
+    }
+
+    static getClickObservable() {
+        return Rx.ClickObservable
+    }
+}
