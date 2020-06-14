@@ -1,6 +1,6 @@
-import React, {Dispatch, useEffect, useLayoutEffect, useState} from "react";
+import React, {useLayoutEffect, useState} from "react";
 import Presenter from "./presenter";
-import {Click, ClickCounterViewModelMutator, ClickViewModel, IClick, IClickViewModel, Rx} from "./viewmodel";
+import {ClickCounterViewModelMutator, IClick, Rx} from "./viewmodel";
 
 const viewModelMutators = ClickCounterViewModelMutator;
 
@@ -14,7 +14,7 @@ function ClickCounter(props: IProviderProps) {
     useLayoutEffect(() => {
         Rx.registerObserver(setClickState);
         Rx.sink(props.clickModel)
-    }, [])
+    },  [props.clickModel])
     return (
         <Presenter clickCount={click.counter}
                    incrementCounter={() => rxIncrementCounter(click)}
