@@ -7,7 +7,7 @@ import SimpleHeader from "../../components/mutable/simpleheader/simpleheader";
 function App() {
     // fetch the latest view model here from data provider
 
-    // Avoid large view models like this as this will
+    // Avoid large view models like this as this will cause
     // inefficient re-rendering of layouts even for
     // components that do not depend on the latest
     // view model updates
