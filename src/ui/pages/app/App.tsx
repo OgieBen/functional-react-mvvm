@@ -15,12 +15,12 @@ function App() {
 
     // instead break them into independent components like this
     // const userModel = new User();
-    const clickCounterModel = new Click(0);
+    // const clickCounterModel = new Click(0);
     return (
         <div>
-            <SimpleHeader counter={clickCounterModel.counter}></SimpleHeader>
-            <ClickCounter clickModel={clickCounterModel}></ClickCounter>
-            <ClickCounter clickModel={clickCounterModel}></ClickCounter>
+            <SimpleHeader counter={0}></SimpleHeader>
+            <ClickCounter clickModel={new Click(0)}></ClickCounter>
+            <ClickCounter clickModel={new Click(0)}></ClickCounter>
         </div>
     );
 }
