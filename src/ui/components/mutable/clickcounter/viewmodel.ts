@@ -1,27 +1,6 @@
 // Login
 import {decorate, observable} from "mobx";
 
-export interface ILoginViewModel {
-    user: User;
-    clickCount: number;
-}
-
-export class LoginModel implements ILoginViewModel {
-    constructor(readonly user: User, readonly clickCount: number = 0) {
-    };
-}
-
-// User
-export interface IUser {
-    userName: String;
-    password: String;
-}
-
-export class User implements IUser {
-    constructor(readonly userName: String = "", readonly password: String = "",) {
-    };
-}
-
 // Click
 export interface IClick {
     counter: number;

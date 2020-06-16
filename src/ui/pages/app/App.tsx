@@ -2,11 +2,8 @@ import React from 'react';
 import './App.css';
 import ClickCounter from "../../components/mutable/clickcounter/clickcounter";
 import {
-    Click,
     ClickCounterViewModelMutator,
     ClickViewModel,
-    LoginModel,
-    User
 } from "../../components/mutable/clickcounter/viewmodel";
 import {observer} from "mobx-react";
 
