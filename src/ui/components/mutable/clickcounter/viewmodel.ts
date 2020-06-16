@@ -51,11 +51,11 @@ export class ClickCounterViewModelMutator {
 }
 
 export interface IClickViewModel {
-    click: Click;
+    click: IClick;
 }
 
 export class ClickViewModel implements IClickViewModel {
-    click: Click;
+    click: IClick;
 
     constructor(click: IClick = new Click()) {
         this.click = click;

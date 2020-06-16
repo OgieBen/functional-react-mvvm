@@ -22,8 +22,8 @@ function App() {
     // const loginModel = new LoginModel(new User(), 0);
 
     // instead break them into independent components like this
-    const userModel = new User();
-    const clickCounterModel = new Click(0);
+    // const userModel = new User();
+    // const clickCounterModel = new Click(0);
     return (
         <React.Fragment>
             <Header viewModel={viewModel}></Header>
